@@ -2,7 +2,7 @@
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** claude-opus-5-5
 **Herramienta:** Claude Code
 
 ```
