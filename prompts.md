@@ -214,3 +214,25 @@ añade los prompts de esta sesión a prompts.md
 ```
 
 **Qué salió:** la IA añadió estos prompts, literales, sacados del historial de la sesión.
+
+## Prompt 17
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+haz el commit, el push y abre el PR
+```
+
+**Qué salió:** la IA hizo el commit, el push y abrió el PR contra `s2/start` del repo del curso. Después pasó el revisor adversarial, que encontró que el documento se contradecía: decía que los cambios en vivo no aportaban nada a H3, y en la parte B que sin ellos se podía romper H3. También vio que 7 exclusiones no nombraban ninguna hipótesis.
+
+## Prompt 18
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+admitir el riesgo en la exclusión, y ajusta lo demás
+```
+
+**Qué salió:** elegí admitir el riesgo para H3 en vez de volver a meter el 8. La IA lo dejó escrito, ligó cada exclusión a una hipótesis, concretó el punto 6, añadió «soltar una tarea» al punto 3, marcó como riesgo que cualquier cuenta registrada lo vea todo y aclaró la autoría de la parte B.
