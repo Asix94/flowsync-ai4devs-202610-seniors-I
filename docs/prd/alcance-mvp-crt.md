@@ -18,7 +18,7 @@ FlowSync solo tiene construida la cuenta de usuario: registro, inicio de sesión
 
 - Hay tres estados fijos: *Pendiente*, *En curso* y *Hecha*. No hay estado *Bloqueada*, porque los bloqueos quedan fuera.
 - Solo el título es obligatorio. Una tarea sin responsable está libre.
-- Cualquier cuenta registrada entra en el espacio único. No hay invitaciones ni más de un equipo.
+- Cualquier cuenta registrada entra en el espacio único. No hay invitaciones ni más de un equipo. **Riesgo asumido:** cualquiera que se registre ve y edita todas las tareas. Vale para un caso de estudio con un equipo, pero no para abrirlo al público.
 
 ## 3. El alcance
 
@@ -38,10 +38,10 @@ Tu cola de trabajo y la del equipo están en la misma lista. Actualizarla cuesta
 
 1. **Espacio único compartido.** Todas las personas con cuenta ven la misma lista de tareas.
 2. **Crear una tarea** con solo el título como campo obligatorio.
-3. **Asignar un responsable**, que incluye cogerse una tarea libre con un clic.
+3. **Asignar un responsable**, que incluye cogerse una tarea libre con un clic y soltarla para que vuelva a estar libre.
 4. **Cambiar el estado desde la propia lista**, sin abrir la tarea, entre los tres estados fijos.
 5. **Filtrar la lista por estado.**
-6. **«Qué se ha movido desde tu última visita».** Resalta en la lista lo que ha cambiado mientras no estabas.
+6. **«Qué se ha movido desde tu última visita».** Al abrir la lista, cada persona ve resaltado lo que ha cambiado (tareas nuevas, cambios de estado y de responsable) desde la última vez que la miró, sea cual sea el dispositivo.
 
 ### NO-alcance
 
@@ -55,9 +55,9 @@ Cada exclusión dice cuál de ellas no ayuda a validar.
 
 **Recortado por el autor de la propuesta de la IA:**
 
-- **Editar el título de una tarea y borrarla.** No ayuda a validar H1, H2 ni H3: lo que se prueba es si el *estado* se mantiene al día, no si el título es correcto. Una tarea mal escrita o muerta se pasa a *Hecha*.
+- **Editar el título de una tarea y borrarla.** No ayuda a validar H1, H2 ni H3: lo que se prueba es si el *estado* se mantiene al día, no si el título es correcto. Una tarea mal escrita o muerta se pasa a *Hecha*. Asumo que la lista acumula tareas muertas en *Hecha*; el filtro por estado las saca de la vista.
 - **Fecha de vencimiento y tareas vencidas.** Ninguna de las tres hipótesis depende del plazo: se valida quién está en qué y qué está libre, no si llega a tiempo. Va contra la ficha, que pide la fecha, y queda anotado como decisión consciente.
-- **Cambios en vivo, sin refrescar.** Con el equipo en tres husos horarios, el caso real es llegar y ver qué se ha movido, y eso lo cubre el punto 6. El «en vivo» es lo más caro de construir y no añade nada a H2 ni H3 que no dé el resumen al volver. Va contra la definición literal de «tiempo real» de la ficha.
+- **Cambios en vivo, sin refrescar.** Con el equipo en tres husos horarios, el caso real es llegar y ver qué se ha movido, y eso lo cubre el punto 6. Para H2 no añade nada que no dé el resumen al volver. **Para H3 sí hay un riesgo, y lo acepto a propósito:** si dos personas tienen la lista abierta a la vez, una puede coger una tarea que la otra ya cogió hace minutos sin verlo. Con tres husos horarios espero que pase poco, y es la señal que vigilo (ver parte B, línea 3). El «en vivo» es lo más caro de construir. Va contra la definición literal de «tiempo real» de la ficha.
 
 **Excluido desde la propuesta de la IA:**
 
@@ -71,21 +71,21 @@ Cada exclusión dice cuál de ellas no ayuda a validar.
 - **Importar o sincronizar con Jira u otro gestor.** El producto sustituye al gestor actual. Convivir con otro obliga a actualizar dos veces, y así muere H1.
 - **Estado *Bloqueada* y gestión de bloqueos.** La parte de bloqueos de la daily sigue fuera del MVP. Meterla mezcla la medida de H2 con otro problema.
 - **Estados o flujos configurables.** Configurar es justo el «rollo de Jira». Tres estados fijos bastan para H1, H2 y H3.
-- **Sprints, estimaciones, épicas, backlog priorizado, prioridad y etiquetas.** Son planificación, no visibilidad. Un equipo que los necesita no es nuestro usuario.
-- **Subtareas y dependencias.** Añaden estructura que no hace falta para saber quién está en qué.
-- **Analítica, informes e historial de actividad completo.** No hay reporte hacia arriba y nadie del usuario objetivo cobra ese valor. El resumen del punto 6 es local y temporal, no un histórico.
-- **Roles y permisos.** Los roles son planos y todos editan lo mismo. Una jerarquía no ayuda a validar nada del MVP.
-- **Varios equipos o espacios, e invitaciones.** El MVP tiene un espacio único. Separar equipos es crecer, no validar.
-- **Edición simultánea, adjuntos y descripciones ricas.** «Tiempo real» no significa colaborar a la vez sobre un documento, y una tarea solo necesita título, responsable y estado.
-- **App móvil nativa.** El caso de uso es llegar por la mañana y mirar la lista. Una web basta para validar las tres hipótesis.
+- **Sprints, estimaciones, épicas, backlog priorizado, prioridad y etiquetas.** Son planificación, no visibilidad: ninguna de las tres hipótesis depende de ellos, y cada campo de más sube el coste de actualizar, que es justo lo que H1 necesita bajo. Un equipo que los necesita no es nuestro usuario.
+- **Subtareas y dependencias.** H3 se valida a nivel de tarea («¿quién tiene esto?»), no de subtarea. Más estructura que mantener sube el coste de actualizar, en contra de H1.
+- **Analítica, informes e historial de actividad completo.** No ayudan a validar H1, H2 ni H3: no hay reporte hacia arriba y nadie del usuario objetivo cobra ese valor. El resumen del punto 6 solo muestra lo cambiado desde la última visita de cada persona, no un histórico.
+- **Roles y permisos.** Los roles son planos y todos editan lo mismo. H1, H2 y H3 se prueban entre pares; una jerarquía solo añade fricción para actualizar, en contra de H1.
+- **Varios equipos o espacios, e invitaciones.** El MVP tiene un espacio único. H1, H2 y H3 se validan con un solo equipo de 3 a 10 personas; separar equipos es crecer, no validar.
+- **Edición simultánea, adjuntos y descripciones ricas.** «Tiempo real» no significa colaborar a la vez sobre un documento. Ninguna hipótesis necesita más que título, responsable y estado, y cada campo de más sube el coste de actualizar (H1).
+- **App móvil nativa.** El caso de uso es llegar por la mañana y mirar la lista. H1, H2 y H3 se validan igual en una web; una app no añade nada a ninguna.
 
 ## Parte B: las tres líneas
 
-> Las decisiones son del autor: qué recortar, qué exclusión le genera más duda y qué señal la haría entrar. La IA las pasó a limpio y redactó los porqués de la línea 2, que el autor revisó y aprobó.
+> Las decisiones son del autor: qué recortar, qué exclusión le genera más duda y qué señal la haría entrar. La IA las pasó a limpio y redactó los porqués de la línea 2, que el autor revisó y aprobó. La contradicción de la línea 3 la sugirió la IA y el autor la adoptó; la señal que haría entrar el 8 la eligió el autor entre las que propuso la IA.
 
 1. **Los dos números:** propuestas de la IA dentro del alcance: 9 · dentro tras mi recorte: 6
 2. **Tres cosas que dejé fuera, y por qué:**
    - **Editar y borrar:** no ayuda a validar H1, H2 ni H3. Lo que se prueba es si el estado se mantiene al día, no si el título está bien escrito.
    - **Fecha de vencimiento:** ninguna hipótesis depende del plazo. Se valida quién está en qué y qué está libre, no si llega a tiempo.
-   - **Cambios en vivo:** con tres husos horarios, el caso real es llegar y ver qué se ha movido, y eso ya lo cubre el resumen. No añade nada a H2 ni H3.
+   - **Cambios en vivo:** con tres husos horarios, el caso real es llegar y ver qué se ha movido, y eso ya lo cubre el resumen. No añade nada a H2; para H3 acepto el riesgo de que dos personas cojan lo mismo con minutos de diferencia.
 3. **La exclusión de la que menos seguro estoy, y qué tendría que pasar para que entrara:** los cambios en vivo. Se contradicen lo que pide la ficha (tiempo real es ver los cambios sin refrescar) y el uso real (con tres husos horarios, lo normal es llegar y ver qué se ha movido). Al quitarlo, el producto pierde lo que el párrafo original más pedía. Entraría si en la semana de prueba dos personas cogen la misma tarea con minutos de diferencia porque una tenía la lista abierta sin refrescar: eso rompe H3, justo lo que el producto quiere evitar.
