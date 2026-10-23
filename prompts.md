@@ -236,3 +236,25 @@ admitir el riesgo en la exclusión, y ajusta lo demás
 ```
 
 **Qué salió:** elegí admitir el riesgo para H3 en vez de volver a meter el 8. La IA lo dejó escrito, ligó cada exclusión a una hipótesis, concretó el punto 6, añadió «soltar una tarea» al punto 3, marcó como riesgo que cualquier cuenta registrada lo vea todo y aclaró la autoría de la parte B.
+
+## Prompt 19
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+¿ya está todo completo?
+```
+
+**Qué salió:** la IA comprobó la entrega contra el README: el PR tiene solo los dos ficheros y está todo subido. Lo único abierto era confirmar «soltar una tarea», que había añadido ella durante la revisión.
+
+## Prompt 20
+
+**Modelo:** Opus 5.5
+**Herramienta:** Claude Code
+
+```
+déjalo, mantén soltar una tarea
+```
+
+**Qué salió:** confirmé el cambio que había añadido la IA; el alcance no se tocó.
