@@ -105,3 +105,47 @@ si, vamos con la tarea 9
 ```
 
 **Qué salió:** commit de `docs/verificacion`, `backend/tests` y `prompts.md` con la skill `/commit`, y push a la rama del fork.
+
+## Prompt 9
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+si, vamos con la tarea 10
+```
+
+**Qué salió:** identificó el repo del curso (`LIDR-academy-temp/...`, padre del fork; el del README no existe) y la base `s4/start`. El `gh pr create` lo bloqueó el modo auto de Claude Code por ser una acción pública; el PR lo abrí yo a mano con el cuerpo que preparó.
+
+## Prompt 10
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+ya abrí el PR, vamos con la tarea 11
+```
+
+**Qué salió:** no encontró el PR de `trazabilidad-crt` en el repo del curso; lanzó igualmente el subagente `adversarial-reviewer` (read-only) sobre el diff de la rama contra `s4/start`.
+
+## Prompt 11
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+este es el PR
+```
+
+**Qué salió:** no funcionó: el mensaje llegó sin URL y el PR seguía sin aparecer en el repo del curso.
+
+## Prompt 12
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+si, añade los hallazgos a crt.md y haz commit y push
+```
+
+**Qué salió:** añadió a `crt.md` la sección de la revisión adversarial (sin tocar los tests) y commiteó y empujó junto con los prompts 9–12.
