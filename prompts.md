@@ -22,14 +22,104 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ## Prompt 1
 
-**Modelo:** Opus 1M xHigh
+**Modelo:** Claude Opus 5.5
 **Herramienta:** Claude Code
 
 ```
-Este es el ejemplo. Bórralo.
-
-El prompt va aquí dentro, entero y con sus saltos de línea,
-para que se sepa dónde empieza y dónde acaba.
+muéstrame las reglas de proceso del CLAUDE.md
 ```
 
-**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+**Qué salió:** Me las mostró tal cual y avisó de que algunas viñetas llevan varias reglas dentro.
+
+## Prompt 2
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+no entiendo que respuesta tengo que dar
+```
+
+**Qué salió:** Me explicó que la apuesta es una nota mía (sí / no / ni idea por regla), no una respuesta para el agente.
+
+## Prompt 3
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+sí, crea el archivo con la sección de apuesta
+1r - si
+2n - ni idea
+3r - no
+4t - ni idea 
+5t - ni idea
+```
+
+**Qué salió:** Creó `docs/auditoria/crt.md` con la apuesta, la tabla vacía y las tres líneas.
+
+## Prompt 4
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+audita las reglas contra los últimos 15 commits sin modificar archivos
+```
+
+**Qué salió:** Funcionó a la primera: tabla en el chat con 1 se cumple y 4 no se pueden comprobar; no tocó archivos.
+
+## Prompt 5
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+sí, vuelca la tabla en crt.md
+```
+
+**Qué salió:** Volcó la tabla en el archivo, debajo de la apuesta.
+
+## Prompt 6
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+añade los prompts a prompts.md
+```
+
+**Qué salió:** Este archivo.
+
+## Prompt 7
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+ayúdame a escribir las tres líneas de la parte B
+```
+
+**Qué salió:** Me dio material y un borrador por línea, avisando de que debían ser mías.
+
+## Prompt 8
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+usa los borradores tal cual y mételos en crt.md
+```
+
+**Qué salió:** Metió los tres borradores sin cambios en `crt.md`.
+
+## Prompt 9
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+haz el commit, el push y abre el PR
+```
+
+**Qué salió:** Commit, push de `auditoria-crt` y PR contra `s5/start` del repo del curso.
