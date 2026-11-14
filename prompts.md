@@ -123,3 +123,25 @@ haz el commit, el push y abre el PR
 ```
 
 **Qué salió:** Commit, push de `auditoria-crt` y PR contra `s5/start` del repo del curso.
+
+## Prompt 10
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+pasa el adversarial-reviewer sobre el PR
+```
+
+**Qué salió:** Sin críticos; marcó la regla 1 incoherente con su evidencia, la contradicción tabla/Parte B en la regla 5 y que la Parte B no era mía.
+
+## Prompt 11
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+sí, corrige el 1 como no se cumple y el 2
+```
+
+**Qué salió:** Regla 1 pasa a *no se cumple* (también en la línea 1 de la Parte B) y la regla 5 a *borrarla* en la tabla.
