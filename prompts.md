@@ -154,3 +154,14 @@ haz lo que falte tu
 ```
 
 **Qué salió:** Quitó de la línea 1 de la Parte B un motivo que el agente había inventado y limpió la instrucción de la plantilla. La comprobación manual de una fila no la puede hacer el agente por mí.
+
+## Prompt 13
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+añade la línea de comprobación manual en crt.md
+```
+
+**Qué salió:** Me pidió antes la salida de `git show --stat afc4b74`; la lancé yo, la pegué y añadió la línea.
