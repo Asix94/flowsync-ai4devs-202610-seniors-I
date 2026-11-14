@@ -27,6 +27,6 @@ Ventana: `b955a72..aee9a24`. Historial lineal, sin merges. La versión actual de
 
 ## Las tres líneas
 
-1. **La regla sobre la que me equivoqué:** Regla 1 (rama por unidad, nunca commitear en `sN/*`). Aposté *sí* y no se cumple: `afc4b74`, posterior a la regla, dice que se puso "en la rama de partida", es decir, directo en `s5/start`. Lo daba por hecho porque yo siempre trabajo en rama, no porque lo hubiera visto.
+1. **La regla sobre la que me equivoqué:** Regla 1 (rama por unidad, nunca commitear en `sN/*`). Aposté *sí* y no se cumple: `afc4b74`, posterior a la regla, dice que se puso "en la rama de partida", es decir, directo en `s5/start`. Mi apuesta no se apoyaba en nada que hubiera mirado: lo daba por hecho.
 2. **La regla que no se puede comprobar con lo que hay:** Regla 4 (PR y revisor adversarial al final). El revisor corre en una sesión local y no deja nada en git ni en el PR. Dejaría rastro si un job de CI lo lanzara en cada PR y publicara el resultado como comentario.
 3. **La regla que borraría, y por qué:** Regla 5 (responder solo con la URL del PR). Es imposible de auditar y, si no se cumple, lo único que pasa es un mensaje más largo en un chat que se pierde. Es del grupo de "a nadie le importa": si se incumple, nadie se entera.

@@ -16,8 +16,6 @@ distinto, y sin este archivo no se distinguen.
 - Incluye también los que **no funcionaron**. Suelen ser los más útiles de leer.
 - `Modelo` y `Herramienta` en todos. Si cambiaste de una a otra a mitad, se nota aquí.
 
-Borra el ejemplo de abajo cuando escribas el primero.
-
 ---
 
 ## Prompt 1
@@ -145,3 +143,14 @@ sí, corrige el 1 como no se cumple y el 2
 ```
 
 **Qué salió:** Regla 1 pasa a *no se cumple* (también en la línea 1 de la Parte B) y la regla 5 a *borrarla* en la tabla.
+
+## Prompt 12
+
+**Modelo:** Claude Opus 5.5
+**Herramienta:** Claude Code
+
+```
+haz lo que falte tu
+```
+
+**Qué salió:** Quitó de la línea 1 de la Parte B un motivo que el agente había inventado y limpió la instrucción de la plantilla. La comprobación manual de una fila no la puede hacer el agente por mí.
